@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DET VIRKER!!!!!</h1>
+
+    <a href="index.html">Reload</a>
+    <a href="s2.html">side 2</a>
+    <a href="s3.html">side 3</a>
+    <a href="s4.html">side 4</a>
+
+    <script>
+        fetch('http://localhost:3000/api/test')
+            .then(response => {
+
+                if (response.status == 200) {
+
+                    return response.json();
+                }
+            })
+            .then(json => {
+                console.log(json);
+            })
+    </script>
+
+</body>
+
+</html>
